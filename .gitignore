@@ -2,3 +2,7 @@ es_env/
 
 .env
 
+es_env
+es_env/*
+
+venv

@@ -14,12 +14,14 @@ from pathlib import Path
 import environ
 import os
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+print("Base directory : ", BASE_DIR)
 env = environ.Env(
     #set casting, default value
     DEBUG = (bool, False)
 )
-
-environ.Env.read_env()
+environ.Env.read_env(BASE_DIR / '.env')
+# environ.Env.read_env()
 
 
 
